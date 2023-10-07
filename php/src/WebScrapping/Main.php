@@ -9,6 +9,7 @@ use OpenSpout\Writer\Common\Creator\WriterEntityFactory;
  * Runner for the Webscrapping exercice.
  */
 class Main {
+
   /**
    * Main runner, instantiates a Scrapper and runs.
    */
@@ -25,10 +26,10 @@ class Main {
       "Author 3 Institution", "Author 4", "Author 4 Institution",
       "Author 5", "Author 5 Institution", "Author 6", "Author 6 Institution",
     ], (new StyleBuilder())
-        ->setFontSize(12)
-        ->setShouldWrapText()
-        ->setShouldShrinkToFit()
-        ->build()));
+      ->setFontSize(12)
+      ->setShouldWrapText()
+      ->setShouldShrinkToFit()
+      ->build()));
     $cells = [];
     foreach ($data as $paper) {
       $row = [];
