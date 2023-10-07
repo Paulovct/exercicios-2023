@@ -12,7 +12,6 @@ class Scrapper {
   /**
    * Loads paper information from the HTML and returns the array with the data.
    */
-
   public function scrap(\DOMDocument $dom): array {
     $data = [];
     $elements = $dom->getElementsByTagName("a");
@@ -39,4 +38,6 @@ class Scrapper {
     }
     return $data;
   }
+
+  
 }

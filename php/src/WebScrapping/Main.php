@@ -12,7 +12,6 @@ class Main {
   /**
    * Main runner, instantiates a Scrapper and runs.
    */
-
   public static function run(): void {
     $dom = new \DOMDocument('1.0', 'utf-8');
     $dom->loadHTMLFile(__DIR__ . '/../../assets/origin.html');
@@ -22,10 +21,10 @@ class Main {
     $writer = WriterEntityFactory::createXLSXWriter();
     $writer->openToFile($path);
     $writer->addRow(WriterEntityFactory::createRowFromArray(["Id", "Title", "Type", "Author 1", "Author 1 Institution",
-       "Author 2", "Author 2 Institution", "Author 3",
-        "Author 3 Institution", "Author 4", "Author 4 Institution",
-        "Author 5", "Author 5 Institution", "Author 6", "Author 6 Institution",
-      ], (new StyleBuilder())
+      "Author 2", "Author 2 Institution", "Author 3",
+      "Author 3 Institution", "Author 4", "Author 4 Institution",
+      "Author 5", "Author 5 Institution", "Author 6", "Author 6 Institution",
+    ], (new StyleBuilder())
         ->setFontSize(12)
         ->setShouldWrapText()
         ->setShouldShrinkToFit()
